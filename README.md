@@ -5,12 +5,14 @@ Tiny Go starter for storing goals and tasks.
 ## Quick start
 
 ```bash
+export GOALTERM_CONFIG="$HOME/Development/goal-term/goalterm.json"
 go run ./cmd/goal-term
 ```
 
 ## Commands
 
 ```bash
+export GOALTERM_CONFIG="$HOME/Development/goal-term/goalterm.json"
 goal-term list
 goal-term set-goal "Ship v1"
 goal-term add-task "Write CLI commands"
@@ -23,6 +25,7 @@ goal-term remove 1
 Set a Gemini API key to enable suggestions on startup:
 
 ```bash
+export GOALTERM_CONFIG="$HOME/.config/goal-term/goalterm.json"
 export GOOGLE_API_KEY="your-api-key"
 ```
 
@@ -48,13 +51,15 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 
 ## Run on new terminals
 
+You are responsible for choosing where the config lives and exporting it in your shell startup.
+
 Add this to your `~/.bashrc`:
 
 ```bash
 # goal-term
+export GOALTERM_CONFIG="$HOME/.config/goal-term/goalterm.json"
 if [[ $- == *i* ]]; then
-  GOALTERM_CONFIG="$HOME/Development/goal-term/goalterm.json" \
-    goal-term list
+  goal-term list
 fi
 ```
 
@@ -62,15 +67,15 @@ Add this to your `~/.zshrc`:
 
 ```zsh
 # goal-term
+export GOALTERM_CONFIG="$HOME/.config/goal-term/goalterm.json"
 if [[ $- == *i* ]]; then
-  GOALTERM_CONFIG="$HOME/Development/goal-term/goalterm.json" \
-    goal-term list
+  goal-term list
 fi
 ```
 
 ## Config file
 
-The goal and tasks are stored in `goalterm.json` at the project root.
+The goal and tasks are stored in the file pointed to by `GOALTERM_CONFIG`.
 
 Example:
 

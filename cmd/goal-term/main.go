@@ -4,7 +4,6 @@ import (
 	"context"
 	"fmt"
 	"os"
-	"path/filepath"
 	"strings"
 	"time"
 
@@ -13,9 +12,10 @@ import (
 )
 
 func main() {
-	configPath := filepath.Join(".", "goalterm.json")
-	if envPath := strings.TrimSpace(os.Getenv("GOALTERM_CONFIG")); envPath != "" {
-		configPath = envPath
+	configPath := strings.TrimSpace(os.Getenv("GOALTERM_CONFIG"))
+	if configPath == "" {
+		fmt.Fprintln(os.Stderr, "GOALTERM_CONFIG must be set to a config file path")
+		os.Exit(1)
 	}
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
