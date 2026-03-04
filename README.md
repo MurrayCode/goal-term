@@ -2,6 +2,8 @@
 
 Tiny Go starter for storing goals and tasks. Provides suggestions on progressing goals & tasks using Gemini.
 
+![Example](images/example)
+
 ## Quick start
 
 ```bash
