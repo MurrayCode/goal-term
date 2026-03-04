@@ -5,14 +5,14 @@ Tiny Go starter for storing goals and tasks.
 ## Quick start
 
 ```bash
-export GOALTERM_CONFIG="$HOME/Development/goal-term/goalterm.json"
+export GOALTERM_CONFIG="$HOME/.config/goal-term/goalterm.json"
 go run ./cmd/goal-term
 ```
 
 ## Commands
 
 ```bash
-export GOALTERM_CONFIG="$HOME/Development/goal-term/goalterm.json"
+export GOALTERM_CONFIG="$HOME/.config/goal-term/goalterm.json"
 goal-term list
 goal-term set-goal "Ship v1"
 goal-term add-task "Write CLI commands"
