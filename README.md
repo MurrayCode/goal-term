@@ -1,6 +1,6 @@
 # goal-term
 
-Tiny Go starter for storing goals and tasks.
+Tiny Go starter for storing goals and tasks. Provides suggestions on progressing goals & tasks using Gemini.
 
 ## Quick start
 
