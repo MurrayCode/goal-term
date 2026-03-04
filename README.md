@@ -94,6 +94,10 @@ Example:
 ## Project layout
 
 - `cmd/goal-term`: entrypoint
+- `internal/app`: orchestration and command handling
+- `internal/cli`: typed command parsing
 - `internal/goal`: goal and task domain types
 - `internal/storage`: config file loader/saver
+- `internal/suggest`: Gemini suggestions interface + implementation
+- `internal/ui`: output formatting
 ```
