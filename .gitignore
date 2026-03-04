@@ -1,0 +1,16 @@
+# Go build artifacts
+/bin/
+/dist/
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go workspace
+/go.work
+/go.work.sum
+
+# Local config
+goalterm.json
